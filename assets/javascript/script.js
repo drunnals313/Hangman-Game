@@ -106,7 +106,7 @@ function updateDisplay() {
 
 
 function updateemptyHangman() {
-    document.getElementById("emptyHangman").src = "assets/images/" + (maxTries - guessesLeft) + ".png";
+    document.getElementById("emptyHangman").src = "assets/images/" + (maxTries - guessesLeft) + ".jpg";
 };
 
 
@@ -124,7 +124,6 @@ document.onkeydown = function(event) {
         }
     }
 };
-
 
 
 function makeGuess(letter) {
