@@ -67,7 +67,7 @@ function resetGame() {
     guessingWord = [];
 
   
-    document.getElementById("emptyHangman").src = "";
+    document.getElementById("emptyHangman").src = "assets/images/emptyHangman.jpg";
 
    
     for (var i = 0; i < animals
