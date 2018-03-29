@@ -4,7 +4,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     color: white;
     text-shadow: black;
-    background: url('') no-repeat;
+    background: url('extra_clean_paper.png') no-repeat;
     background-size: cover;
 }
 .container { 

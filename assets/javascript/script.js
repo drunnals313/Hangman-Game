@@ -141,6 +141,7 @@ function makeGuess(letter) {
     
     updateDisplay();
     checkWin();
+    checkLose();
 };
 
 
