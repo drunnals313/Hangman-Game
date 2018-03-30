@@ -55,10 +55,10 @@ var letter =
         "z",
     ];     
 
-const maxTries = 12;      
+const bodyParts = 12;      
 
 function resetGame() {
-    guessesLeft = maxTries;
+    guessesLeft = bodyParts;
     gameStarted = false;
 
     
@@ -76,10 +76,10 @@ function resetGame() {
         [currentWordIndex].length; i++) {
         guessingWord.push("_");
     }
-
-    document.getElementById("tryAgain");
-    document.getElementById("loseImg");
-    document.getElementById("winImg");
+//this part is not working the way I would like
+    document.getElementById("tryAgain").style.cssText= "display: none";
+    document.getElementById("loseImg").style.cssText = "display: none";
+    document.getElementById("winImg").style.cssText = "display: none";
 
    
     updateDisplay();
@@ -90,9 +90,9 @@ function resetGame() {
 
 function updateDisplay() {
 
+    document.getElementById("currentWord").innerText = "";
     document.getElementById("totalWins").innerText = wins;
     document.getElementById("totalLoses").innerText = loses;
-    document.getElementById("currentWord").innerText = "";
     for (var i = 0; i < guessingWord.length; i++) {
         document.getElementById("currentWord").innerText += guessingWord[i];
     }
@@ -108,7 +108,7 @@ function updateDisplay() {
 
 
 function updateemptyHangman() {
-    document.getElementById("emptyHangman").src = "assets/images/" + (maxTries - guessesLeft) + ".jpg";
+    document.getElementById("emptyHangman").src = "assets/images/" + (bodyParts - guessesLeft) + ".jpg";
 };
 
 
@@ -169,7 +169,7 @@ function evaluateGuess(letter) {
     }
 };
 
-
+// I think I need to combine these check win and check lose functions into an if else
 function checkWin() {
     if(guessingWord.indexOf("_") === -1) {
         document.getElementById("winImg");

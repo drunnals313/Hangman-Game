@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Hangman-Game</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/javascript/script.js" type="text/javascript"></script>
+
+
 </head>
 
 <body>
@@ -16,7 +19,7 @@
         <img id="cover-image" src="assets/images/bloodyHangman.png" alt="Hangman Cover Image" />
 
         <div class="row">
-            <div class="col-md-12 game">
+            <div class="col-md-12" id="hm">
                 <h2>Press Any Key to Start Playing and Keep Playing:</h2>
                 <h3 id="currentWord"></h3>
                 <h4>Wins:</h4>
@@ -31,16 +34,13 @@
         </div>
         <div class="row">
             <img id="winImg" src="assets/images/hangmanwin.jpg" alt="Congrats, You Won" />
-            <img id="loseImg" src="assets/images/hangman.png" alt="Sorry, You Lose" />
-            <h2 id="TryAgain">Press Any Key to Try Again!</h2>
+            <img id="loseImg" src="assets/images/hangmanDead.png" alt="Sorry, You Lose" />
+            <h2 id="tryAgain">Press Any Key to Try Again!</h2>
             <img id="emptyHangman" src="assets/images/emptyHangman.jpg" alt="Empty Hangman" />
         </div>
     </div>
 
-    <script>
-        resetGame();
-        updateDisplay();
-    </script>
+   
    
 </body>
 

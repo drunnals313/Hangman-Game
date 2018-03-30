@@ -15,7 +15,7 @@ body {
 #tryAgain, 
 #loseImg, 
 #winImg { display: none;}
-.game {
+#hm {
     padding-top: 20px;
     border: 10px  rgb(248, 4, 4);
     text-align: center;
