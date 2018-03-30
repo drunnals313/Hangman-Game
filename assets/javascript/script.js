@@ -17,14 +17,14 @@ var animals =
 
       
 
-var guessedLetters = [];        
+var gameStarted = false;        
+var hasFinished = false;     
 var currentWordIndex;           
 var guessingWord = [];         
-var guessesLeft = 0;      
-var gameStarted = false;        
-var hasFinished = false;          
-var wins = 0;   
-var loses = 0;    
+var guessesLeft = 0;               
+var winSum = 0;   
+var loseSum = 0; 
+var guessesSoFar = [];      
 var letter = 
     [
         "a",
@@ -65,7 +65,7 @@ function resetGame() {
     currentWordIndex = Math.floor(Math.random() * (animals.length));
 
 
-    guessedLetters = [];
+    guessesSoFar = [];
     guessingWord = [];
 
   
@@ -76,7 +76,7 @@ function resetGame() {
         [currentWordIndex].length; i++) {
         guessingWord.push("_");
     }
-//this part is not working the way I would like
+//this part is not working the way I would like so I mislabeled the images to hide them for now until I can figure this part out
     document.getElementById("tryAgain").style.cssText= "display: none";
     document.getElementById("loseImg").style.cssText = "display: none";
     document.getElementById("winImg").style.cssText = "display: none";
@@ -91,13 +91,13 @@ function resetGame() {
 function updateDisplay() {
 
     document.getElementById("currentWord").innerText = "";
-    document.getElementById("totalWins").innerText = wins;
-    document.getElementById("totalLoses").innerText = loses;
+    document.getElementById("totalWins").innerText = winSum;
+    document.getElementById("totalLoses").innerText = loseSum;
     for (var i = 0; i < guessingWord.length; i++) {
         document.getElementById("currentWord").innerText += guessingWord[i];
     }
     document.getElementById("guessesLeft").innerText = guessesLeft;
-    document.getElementById("guessedLetters").innerText = guessedLetters;
+    document.getElementById("guessesSoFar").innerText = guessesSoFar;
     if(guessesLeft <= 0) {
         document.getElementById("loseImg");
         document.getElementById("tryAgain");
@@ -134,8 +134,8 @@ function makeGuess(letter) {
             gameStarted = true;
         }
 
-        if (guessedLetters.indexOf(letter) === -1) {
-            guessedLetters.push(letter);
+        if (guessesSoFar.indexOf(letter) === -1) {
+            guessesSoFar.push(letter);
             evaluateGuess(letter);
         }
     }
@@ -174,7 +174,7 @@ function checkWin() {
     if(guessingWord.indexOf("_") === -1) {
         document.getElementById("winImg");
         document.getElementById("tryAgain");
-        wins++;
+        winSum++;
         hasFinished = true;
     }
 };
@@ -183,7 +183,7 @@ function checkLose() {
     if(guessingWord.indexOf("_") === -1) {
         document.getElementById("loseImg");
         document.getElementById("tryAgain");
-        loses++;
+        loseSum++;
         hasFinished = true;
     }
 };  

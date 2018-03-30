@@ -1,10 +1,9 @@
 body {
-    background-color: rgb(248, 245, 245);
     padding-top: 5px;
     font-family: 'Times New Roman', Times, serif;
     color: white;
-    text-shadow: black;
-    background: url('extra_clean_paper.png') no-repeat;
+    text-shadow: rgb(201, 23, 23);
+    background: url('animalpic.jpg') no-repeat;
     background-size: cover;
 }
 .container { 
@@ -27,7 +26,7 @@ body {
 h1,h2,h3,
 h4,h5,h6 {
     padding: 7px;
-    background-color: rgba(6, 30, 70, 0.2);
+    background-color: rgba(1, 14, 5, 0.2);
 }
 #cover-image, #loseImg, #winImg{ 
     display: block;

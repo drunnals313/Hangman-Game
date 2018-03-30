@@ -16,11 +16,12 @@
 
 <body>
     <div class="container">
-        <img id="cover-image" src="assets/images/bloodyHangman.png" alt="Hangman Cover Image" />
+        <!-- <img id="cover-image" src="assets/images/bloodyHangman.png" alt="Hangman Cover Image" /> -->
 
         <div class="row">
-            <div class="col-md-12" id="hm">
+            <div class="col-md-6" id="hm">
                 <h2>Press Any Key to Start Playing and Keep Playing:</h2>
+                <h4>Current Animal:</h4>
                 <h3 id="currentWord"></h3>
                 <h4>Wins:</h4>
                 <h5 id="totalWins"></h5>
@@ -29,17 +30,21 @@
                 <h4>Guesses Left (of 12):</h4>
                 <h6 id="guessesLeft"></h6>
                 <h4>Your Guesses So Far:</h4>
-                <h3 id="guessedLetters"></h3>
+                <h3 id="guessesSoFar"></h3>
             </div>
-        </div>
-        <div class="row">
-            <img id="winImg" src="assets/images/hangmanwin.jpg" alt="Congrats, You Won" />
-            <img id="loseImg" src="assets/images/hangmanDead.png" alt="Sorry, You Lose" />
-            <h2 id="tryAgain">Press Any Key to Try Again!</h2>
-            <img id="emptyHangman" src="assets/images/emptyHangman.jpg" alt="Empty Hangman" />
+            <div class="col-md-6">
+                <img id="winImg" src="assets/images/hangmanwin1.jpg" alt="Congrats, You Won" /> <!-- cannot get images to fire at the right time so mislabeling for now to stop -->
+                <img id="loseImg" src="assets/images/youdidnotwin1.jpeg" alt="Sorry, You Lose" />
+                <h2 id="tryAgain">Press Any Key to Try Again!</h2>
+                <img id="emptyHangman" src="assets/images/emptyHangman1.jpg" alt="Empty Hangman" />
+            </div>
         </div>
     </div>
 
+    <script>
+            resetGame();
+            updateDisplay();
+    </script>
    
    
 </body>
