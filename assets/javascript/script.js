@@ -15,7 +15,7 @@ var animals =
         "kangaroo",
     ];
 
-const maxTries = 12;            
+      
 
 var guessedLetters = [];        
 var currentWordIndex;           
@@ -53,7 +53,9 @@ var letter =
         "x",
         "y",
         "z",
-    ];            
+    ];     
+
+const maxTries = 12;      
 
 function resetGame() {
     guessesLeft = maxTries;
@@ -75,7 +77,7 @@ function resetGame() {
         guessingWord.push("_");
     }
 
-    document.getElementById("pressKeyTryAgain");
+    document.getElementById("tryAgain");
     document.getElementById("loseImg");
     document.getElementById("winImg");
 
@@ -98,7 +100,7 @@ function updateDisplay() {
     document.getElementById("guessedLetters").innerText = guessedLetters;
     if(guessesLeft <= 0) {
         document.getElementById("loseImg");
-        document.getElementById("pressKeyTryAgain");
+        document.getElementById("tryAgain");
         hasFinished = true;
     }
 };
@@ -171,7 +173,7 @@ function evaluateGuess(letter) {
 function checkWin() {
     if(guessingWord.indexOf("_") === -1) {
         document.getElementById("winImg");
-        document.getElementById("pressKeyTryAgain");
+        document.getElementById("tryAgain");
         wins++;
         hasFinished = true;
     }
@@ -180,7 +182,7 @@ function checkWin() {
 function checkLose() {
     if(guessingWord.indexOf("_") === -1) {
         document.getElementById("loseImg");
-        document.getElementById("pressKeyTryAgain");
+        document.getElementById("tryAgain");
         loses++;
         hasFinished = true;
     }
