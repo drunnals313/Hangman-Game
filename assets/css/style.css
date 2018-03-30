@@ -2,7 +2,7 @@ body {
     padding-top: 5px;
     font-family: 'Times New Roman', Times, serif;
     color: white;
-    text-shadow: rgb(201, 23, 23);
+    text-shadow: rgb(23, 201, 53);
     background: url('animalpic.jpg') no-repeat;
     background-size: cover;
 }
@@ -20,13 +20,13 @@ body {
     text-align: center;
     margin-top: 20px;
     min-height: 500px;
-    background-color: rgba(21, 17, 211, 0.3);
+    background-color: rgba(1, 0, 10, 0.3);
 }
 
 h1,h2,h3,
 h4,h5,h6 {
     padding: 7px;
-    background-color: rgba(1, 14, 5, 0.2);
+    background-color: rgba(5, 5, 5, 0.2);
 }
 #cover-image, #loseImg, #winImg{ 
     display: block;
