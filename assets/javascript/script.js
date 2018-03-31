@@ -78,7 +78,7 @@ function resetGame() {
         [currentWordIndex].length; i++) {
         guessingWord.push("_");
     }
-//this part is not working the way I would like so I mislabeled the images in the index.html file to hide them for now until I can figure this part out
+//this part is not working the way I would like so I mislabeled the images in the index.html file to hide them for now until I can figure this part out. Until I get it to work, the switch in between will be awkward and I will have to tell the user to select enter or any key after hitting ok on the prompt. Need to make a more ideal usewr experience flow.
     document.getElementById("tryAgain").style.cssText= "display: none";
     document.getElementById("loseImg").style.cssText = "display: none";
     document.getElementById("winImg").style.cssText = "display: none";
@@ -144,7 +144,6 @@ function makeGuess(letter) {
     
     updateDisplay();
     checkWin();
-    checkLose();
 };
 
 
@@ -177,15 +176,15 @@ function checkWin()
     if(guessingWord.indexOf("_") === -1) {
         document.getElementById("winImg");
         document.getElementById("tryAgain");
-        winSum++;
         hasFinished = true;
-        alert("you win");
+        winSum++;
+        alert("you win ---------- play again by selecting OK and enter"); //this alert is firing before the filling in the puzzle; still have to fix this
     }
     else if (guessesLeft<=0) {
         document.getElementById("loseImg");
         document.getElementById("tryAgain");
         loseSum++;
-        alert("sorry, you lose: please play again");
+        alert("sorry, you lose ---------- play again by selecting OK and enter"); //this alert is firing before the filling in the puzzle; still have to fix this
     }
     
 };
