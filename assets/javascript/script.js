@@ -55,7 +55,9 @@ var letter =
         "z",
     ];     
 
-const bodyParts = 12;      
+const bodyParts = 12;   
+
+
 
 function resetGame() {
     guessesLeft = bodyParts;
@@ -76,7 +78,7 @@ function resetGame() {
         [currentWordIndex].length; i++) {
         guessingWord.push("_");
     }
-//this part is not working the way I would like so I mislabeled the images to hide them for now until I can figure this part out
+//this part is not working the way I would like so I mislabeled the images in the index.html file to hide them for now until I can figure this part out
     document.getElementById("tryAgain").style.cssText= "display: none";
     document.getElementById("loseImg").style.cssText = "display: none";
     document.getElementById("winImg").style.cssText = "display: none";
@@ -170,20 +172,21 @@ function evaluateGuess(letter) {
 };
 
 // I think I need to combine these check win and check lose functions into an if else
-function checkWin() {
+function checkWin() 
+    {
     if(guessingWord.indexOf("_") === -1) {
         document.getElementById("winImg");
         document.getElementById("tryAgain");
         winSum++;
         hasFinished = true;
+        alert("you win");
     }
-};
-
-function checkLose() {
-    if(guessingWord.indexOf("_") === -1) {
+    else if (guessesLeft<=0) {
         document.getElementById("loseImg");
         document.getElementById("tryAgain");
         loseSum++;
-        hasFinished = true;
+        alert("sorry, you lose: please play again");
     }
-};  
+    
+};
+
