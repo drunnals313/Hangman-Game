@@ -13,6 +13,7 @@ var animals =
         "tortoise",
         "lizard",
         "kangaroo",
+        "gorilla"
     ];
 
       
