@@ -1,5 +1,4 @@
-
-
+//js logic for the html
 var animals =          
     [
         "wallaby",
@@ -87,8 +86,6 @@ function resetGame() {
    
     updateDisplay();
 };
-
-
 
 
 function updateDisplay() {
